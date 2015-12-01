@@ -3,35 +3,40 @@ package Curency;
 
 public class CurrencyState {
 	
-	private static double usd;
-	private static double eur;
-	private static double rur;
+	private double usd;
+	private double eur;
+	private double rur;
 	
-	static public void setCurencys (double usd, double eur, double rur){
-		
-		CurrencyState.usd = usd;
-		CurrencyState.eur = eur;
-		CurrencyState.rur = rur;
+	public CurrencyState (double usd, double eur, double rur){	
+		this.usd = usd;
+		this.eur = eur;
+		this.rur = rur;
 	}
 	
-	static public void getCurencys(){
-		System.out.println("--------------------------------------------------");
-		System.out.println("Kursy stanom on " + TodayData.todayDate());
-		System.out.println();
-		System.out.println(" 1 -    USD -  " + usd);
-		System.out.println(" 2 -    EUR -  " + eur);
-		System.out.println(" 3 -    RUR -  " + rur);
-		System.out.println("--------------------------------------------------");
+	public String toString(){
+		String result = "--------------------------------------------------"+ "\n";
+		result += "Kursy stanom on " + TodayData.todayDate() + "\n";
+		result += " 1 -    USD -  " + usd + "\n";
+		result += " 2 -    EUR -  " + eur + "\n";
+		result += " 3 -    RUR -  " + rur + "\n";
+		result += "--------------------------------------------------"+ "\n";
+		return result;
 	}
 	
-	static public double getUsd(){
+	public double getUsd(){
 		return usd;
 	}
-	static public double getEur(){
+	public double getEur(){
 		return eur;
 	}
-	static public double getRur(){
+	public double getRur(){
 		return rur;
+	}
+
+	public static void setCurencys(double d, double e, double f) {
+		// TODO Auto-generated method stub
+		
 	}
 		
 }
+
